@@ -1,46 +1,47 @@
-// app/products/page.js
-import Link from "next/link";
+export default function Products() {
+  const products = [
+    {
+      name: "ESOCAT DSR",
+      category: "Gastroenterology",
+      description: "A powerful combination of Esomeprazole 40 mg and Domperidone 30 mg for treating acid reflux and GERD.",
+    },
+    {
+      name: "ESOCAT 40",
+      category: "Gastroenterology",
+      description: "Effective proton pump inhibitor for gastritis, peptic ulcers, and acid control.",
+    },
+    {
+      name: "BASOCAL",
+      category: "Orthopedics & Nutrition",
+      description: "Calcium and Vitamin D3 supplement for stronger bones and improved bone density.",
+    },
+    {
+      name: "AMOXIGUARD-CV",
+      category: "Antibiotic",
+      description: "Amoxicillin with Clavulanic acid formulation for broad-spectrum bacterial infections.",
+    },
+    {
+      name: "OXYVIT",
+      category: "Multivitamin",
+      description: "Comprehensive multivitamin formula that boosts immunity, energy, and overall health.",
+    },
+  ];
 
-export default function ProductsPage() {
   return (
-    <main className="min-h-screen bg-gray-50 p-6 md:p-12">
-      <section className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">Products</h1>
+    <section className="bg-yellow-50 text-gray-800 py-16">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center mb-12 text-yellow-700">Our Products</h2>
 
-        <p className="text-gray-700 mb-6">
-          Catalyst Laboratories produces a range of pharmaceutical formulations (tablets & capsules) across therapeutic categories. Below are highlighted product categories.
-        </p>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Card: Antibiotics */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold text-green-700 mb-2">Antibiotics</h3>
-            <p className="text-gray-700 mb-4">Quality antibiotic formulations manufactured following regulatory requirements.</p>
-            <Link href="#" className="text-green-700 hover:underline">Learn more</Link>
-          </div>
-
-          {/* Card: Multivitamins */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold text-blue-700 mb-2">Multivitamins</h3>
-            <p className="text-gray-700 mb-4">A selection of multivitamin and mineral supplements to support general health.</p>
-            <Link href="#" className="text-green-700 hover:underline">Learn more</Link>
-          </div>
-
-          {/* Card: Calcium-D3 */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold text-purple-700 mb-2">Calcium - D3</h3>
-            <p className="text-gray-700 mb-4">Calcium and Vitamin D3 supplements formulated for bone health.</p>
-            <Link href="#" className="text-green-700 hover:underline">Learn more</Link>
-          </div>
-
-          {/* Card: PPI (Proton Pump Inhibitors) */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold text-red-600 mb-2">PPI Class Tablets</h3>
-            <p className="text-gray-700 mb-4">Gastric acid suppression formulations manufactured with quality controls.</p>
-            <Link href="#" className="text-green-700 hover:underline">Learn more</Link>
-          </div>
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
+          {products.map((p, i) => (
+            <div key={i} className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
+              <h3 className="text-2xl font-bold text-yellow-700 mb-2">{p.name}</h3>
+              <p className="font-semibold text-gray-600 mb-2">{p.category}</p>
+              <p>{p.description}</p>
+            </div>
+          ))}
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }

@@ -1,34 +1,43 @@
-// app/about/page.js
-export default function AboutPage() {
+export default function About() {
   return (
-    <main className="min-h-screen bg-gray-50 p-6 md:p-12">
-      <section className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">About Catalyst Laboratories Pvt. Ltd.</h1>
+    <section className="bg-yellow-50 text-gray-800 py-16">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center mb-12 text-yellow-700">About Us</h2>
 
-        <p className="text-gray-700 leading-relaxed mb-4">
-          Catalyst Laboratories is a Kolkata-based pharmaceutical company dedicated to producing safe, effective, and affordable medicines. We combine modern manufacturing practices with a commitment to quality and compliance to improve patient outcomes.
+        <p className="text-lg mb-8 text-center max-w-3xl mx-auto">
+          Catalyst Laboratories Pvt. Ltd. is a fast-growing pharmaceutical company dedicated to innovation,
+          quality, and patient care. We focus on research-driven formulations and the highest manufacturing standards.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-6">
+        <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-lg font-semibold text-green-800 mb-2">Our Mission</h3>
-            <p className="text-gray-700">To provide high-quality pharmaceutical formulations that are accessible and affordable to all.</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-green-800 mb-2">Our Vision</h3>
-            <p className="text-gray-700">To be a trusted name in pharmaceuticals known for quality, innovation, and reliable patient care.</p>
-          </div>
-        </div>
+            <h3 className="text-2xl font-bold text-yellow-700 mb-3">Our Vision</h3>
+            <p>
+              To establish Catalyst Laboratories as a leading healthcare brand recognized globally for quality,
+              trust, and innovation.
+            </p>
 
-        <div className="mt-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">Values</h3>
-          <ul className="list-disc list-inside text-gray-700">
-            <li>Integrity & transparency</li>
-            <li>Patient safety & quality</li>
-            <li>Innovation & continuous improvement</li>
-          </ul>
+            <h3 className="text-2xl font-bold text-yellow-700 mt-8 mb-3">Our Mission</h3>
+            <p>
+              To deliver excellence in healthcare through ethical practices, innovative formulations,
+              and an unwavering commitment to patient well-being.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold text-yellow-700 mb-3">Our Strength</h3>
+            <ul className="list-disc list-inside space-y-2">
+              <li>WHO-GMP & ISO 9001:2015 compliant manufacturing</li>
+              <li>Experienced R&D and formulation team</li>
+              <li>Modern infrastructure and advanced quality control</li>
+              <li>Strong product portfolio across therapeutic segments</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-yellow-700 mt-8 mb-3">Certifications</h3>
+            <p>GMP | ISO 9001:2015 Certified | FSSAI Registered</p>
+          </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }
