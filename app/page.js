@@ -1,45 +1,30 @@
-import Link from "next/link";
-
-export const metadata = {
-  title: "Home | Catalyst Laboratories Pvt. Ltd.",
-  description:
-    "Welcome to Catalyst Laboratories Pvt. Ltd. – advancing healthcare through precision, quality, and trust.",
-};
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-yellow-50 text-gray-900 flex flex-col items-center px-4 sm:px-6 lg:px-8">
+    <main className="flex flex-col items-center justify-center min-h-screen bg-yellow-50 px-4 sm:px-6 md:px-10">
       {/* Hero Section */}
-      <section className="w-full max-w-6xl bg-white p-6 sm:p-10 rounded-lg shadow-md text-center mt-10">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-700 mb-4 leading-snug">
+      <section className="text-center py-10 md:py-16 bg-white rounded-2xl shadow-md w-full max-w-5xl">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-700 mb-4">
           Welcome to Catalyst Laboratories Pvt. Ltd.
         </h1>
-        <p className="text-gray-700 text-base sm:text-lg mb-6">
+        <p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-4">
           Advancing healthcare through precision, quality, and trust. We deliver
           high-quality pharmaceutical formulations and dependable healthcare
           products to improve lives.
         </p>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Link
-            href="/products"
-            className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition w-full sm:w-auto text-center"
-          >
+        <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition text-sm sm:text-base">
             Explore Products
-          </Link>
-          <Link
-            href="/research"
-            className="border border-green-600 text-green-700 px-6 py-2 rounded-md hover:bg-green-100 transition w-full sm:w-auto text-center"
-          >
+          </button>
+          <button className="border border-green-600 text-green-700 px-6 py-3 rounded-lg hover:bg-green-50 transition text-sm sm:text-base">
             Our Research
-          </Link>
+          </button>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 my-12">
-        <div className="p-6 bg-yellow-100 rounded-lg shadow hover:shadow-lg transition text-center sm:text-left">
-          <h3 className="text-lg sm:text-xl font-semibold text-green-700 mb-2">
+      {/* Highlights Section */}
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-12 w-full max-w-6xl px-2">
+        <div className="bg-white rounded-xl shadow p-5 hover:shadow-lg transition">
+          <h3 className="text-green-700 font-semibold text-lg mb-2">
             Quality First
           </h3>
           <p className="text-gray-700 text-sm sm:text-base">
@@ -47,8 +32,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="p-6 bg-yellow-100 rounded-lg shadow hover:shadow-lg transition text-center sm:text-left">
-          <h3 className="text-lg sm:text-xl font-semibold text-green-700 mb-2">
+        <div className="bg-white rounded-xl shadow p-5 hover:shadow-lg transition">
+          <h3 className="text-green-700 font-semibold text-lg mb-2">
             Affordable Care
           </h3>
           <p className="text-gray-700 text-sm sm:text-base">
@@ -57,8 +42,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="p-6 bg-yellow-100 rounded-lg shadow hover:shadow-lg transition text-center sm:text-left">
-          <h3 className="text-lg sm:text-xl font-semibold text-green-700 mb-2">
+        <div className="bg-white rounded-xl shadow p-5 hover:shadow-lg transition">
+          <h3 className="text-green-700 font-semibold text-lg mb-2">
             Wide Portfolio
           </h3>
           <p className="text-gray-700 text-sm sm:text-base">
@@ -69,26 +54,23 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="w-full max-w-5xl bg-yellow-100 rounded-lg p-6 sm:p-8 shadow-md text-center mb-10">
-        <h3 className="text-lg sm:text-xl font-semibold text-green-700 mb-3">
+      <section className="bg-yellow-100 text-center p-6 sm:p-10 rounded-2xl shadow max-w-5xl w-full mb-10">
+        <h3 className="text-green-800 font-semibold text-lg sm:text-xl mb-2">
           Have an enquiry?
         </h3>
-        <p className="text-gray-800 text-sm sm:text-base mb-3">
+        <p className="text-gray-800 text-sm sm:text-base mb-4">
           Email us at{" "}
           <a
             href="mailto:catalystlaboratoriespvtltd@gmail.com"
-            className="text-green-700 underline hover:text-green-800"
+            className="text-green-700 font-medium underline hover:text-green-800"
           >
             catalystlaboratoriespvtltd@gmail.com
           </a>{" "}
           or visit the Contacts page.
         </p>
-        <Link
-          href="/contacts"
-          className="inline-block bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition"
-        >
+        <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition text-sm sm:text-base">
           Contact Us
-        </Link>
+        </button>
       </section>
     </main>
   );
