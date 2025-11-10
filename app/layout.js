@@ -19,81 +19,63 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-yellow-50 text-gray-900 flex flex-col min-h-screen">
-        {/* 🌟 Header / Navbar */}
-        <header className="bg-yellow-300 shadow-md">
-          <div className="container mx-auto flex justify-between items-center p-4">
+      <body
+        className="bg-gray-50 text-gray-900 flex flex-col min-h-screen"
+        style={{ fontFamily: "Bahnschrift Light, sans-serif" }}
+      >
+        {/* 🌐 Header */}
+        <header className="bg-blue-500 shadow-md">
+          <div className="container mx-auto flex justify-between items-center p-4 flex-wrap">
             {/* Logo and Title */}
             <div className="flex items-center space-x-3">
               <img
                 src="/logo.jpg"
                 alt="Catalyst Labs Logo"
-                width={80}
-                height={80}
-                className="rounded-full"
+                width={90}
+                height={90}
+                className="rounded-full object-contain"
               />
-              <h1 className="text-2xl font-bold text-gray-900 tracking-wide">
+              <h1 className="text-3xl font-bold text-white tracking-wide">
                 Catalyst Labs
               </h1>
             </div>
 
-            {/* Navigation Links */}
-            <nav className="space-x-6 text-lg font-semibold">
-              <Link
-                href="/"
-                className="text-gray-900 hover:text-green-700 transition"
-              >
+            {/* Navbar */}
+            <nav className="space-x-6 text-lg font-semibold text-white flex flex-wrap justify-center">
+              <Link href="/" className="hover:text-blue-200 transition-all duration-200">
                 Home
               </Link>
-              <Link
-                href="/about"
-                className="text-gray-900 hover:text-green-700 transition"
-              >
+              <Link href="/about" className="hover:text-blue-200 transition-all duration-200">
                 About
               </Link>
-              <Link
-                href="/research"
-                className="text-gray-900 hover:text-green-700 transition"
-              >
+              <Link href="/research" className="hover:text-blue-200 transition-all duration-200">
                 Research
               </Link>
-              <Link
-                href="/products"
-                className="text-gray-900 hover:text-green-700 transition"
-              >
+              <Link href="/products" className="hover:text-blue-200 transition-all duration-200">
                 Products
               </Link>
-              <Link
-                href="/contacts"
-                className="text-gray-900 hover:text-green-700 transition"
-              >
+              <Link href="/contacts" className="hover:text-blue-200 transition-all duration-200">
                 Contacts
-              </Link>
-              <Link
-                href="/faq"
-                className="text-gray-900 hover:text-green-700 transition"
-              >
-                FAQ
               </Link>
             </nav>
           </div>
         </header>
 
-        {/* 🌐 Page Content */}
-        <main className="flex-grow container mx-auto p-6">{children}</main>
+        {/* Main Content */}
+        <main className="flex-grow container mx-auto p-0">{children}</main>
 
-        {/* 🧾 Footer */}
-        <footer className="bg-yellow-200 text-gray-900 py-6 mt-10 border-t border-yellow-400">
-          <div className="container mx-auto text-center text-sm">
+        {/* Footer */}
+        <footer className="bg-blue-400 text-white py-6 mt-10 border-t border-blue-600">
+          <div className="container mx-auto text-center text-sm px-4">
             <p>
               &copy; {new Date().getFullYear()} Catalyst Laboratories Pvt. Ltd.
               All rights reserved.
             </p>
-            <p className="text-gray-800 mt-2">
+            <p className="mt-2">
               Flat No-GB, Triparno BC-28, Deshbandhu Nagar, North 24 Parganas,
               West Bengal, India – 700059
             </p>
-            <p className="text-gray-800 mt-1">
+            <p className="mt-1">
               Email: catalystlaboratoriespvtltd@gmail.com
             </p>
           </div>

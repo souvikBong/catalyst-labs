@@ -1,34 +1,47 @@
-export default function Research() {
-  return (
-    <section className="bg-yellow-50 text-gray-800 py-16">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12 text-yellow-700">Research & Development</h2>
+export const metadata = {
+  title: "Research | Catalyst Laboratories Pvt. Ltd.",
+  description:
+    "Explore research initiatives and innovations at Catalyst Laboratories Pvt. Ltd.",
+};
 
-        <p className="text-lg mb-8 text-center max-w-3xl mx-auto">
-          At Catalyst Laboratories, innovation drives every process. Our R&D team focuses on creating
-          superior formulations, ensuring efficacy, safety, and patient satisfaction.
+export default function ResearchPage() {
+  return (
+    <section className="bg-gray-100 text-gray-900 min-h-screen py-12 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <h1 className="text-4xl font-bold text-blue-700 mb-6">
+          Research & Innovation
+        </h1>
+        <p className="text-lg text-gray-700 leading-relaxed mb-8">
+          Our R&D team focuses on formulating advanced pharmaceutical products
+          that adhere to international quality standards. We believe innovation
+          is the heart of healthcare progress.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-bold text-yellow-700 mb-3">R&D Focus Areas</h3>
-            <ul className="list-disc list-inside space-y-2">
-              <li>Gastroenterology & Digestive Health</li>
-              <li>Bone & Joint Care</li>
-              <li>Infection Control (Antibiotics)</li>
-              <li>Nutrition & Immunity</li>
-              <li>General Wellness</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold text-yellow-700 mb-3">Quality Standards</h3>
-            <ul className="list-disc list-inside space-y-2">
-              <li>State-of-the-art GMP compliant facilities</li>
-              <li>Stringent quality testing for every batch</li>
-              <li>Continuous innovation in formulation development</li>
-            </ul>
-          </div>
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Formulation Development",
+              desc: "Innovative solutions for oral, injectable, and topical formulations.",
+            },
+            {
+              title: "Analytical Research",
+              desc: "Cutting-edge analytical techniques ensuring product safety and stability.",
+            },
+            {
+              title: "Clinical Evaluation",
+              desc: "Scientific validation through ethical and accurate clinical research.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="bg-white p-6 shadow-md rounded-lg hover:shadow-lg transition"
+            >
+              <h3 className="text-xl font-semibold text-blue-600 mb-3">
+                {item.title}
+              </h3>
+              <p className="text-gray-700 text-base">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

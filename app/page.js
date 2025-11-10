@@ -1,76 +1,107 @@
-export default function HomePage() {
+export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-yellow-50 px-4 sm:px-6 md:px-10">
-      {/* Hero Section */}
-      <section className="text-center py-10 md:py-16 bg-white rounded-2xl shadow-md w-full max-w-5xl">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-700 mb-4">
-          Welcome to Catalyst Laboratories Pvt. Ltd.
-        </h1>
-        <p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-4">
-          Advancing healthcare through precision, quality, and trust. We deliver
-          high-quality pharmaceutical formulations and dependable healthcare
-          products to improve lives.
+    <main className="flex flex-col items-center justify-start min-h-screen bg-gray-50 text-gray-900">
+      {/* 🔹 Fullscreen Hero Section */}
+      <section className="relative w-full h-screen">
+        <img
+          src="/bg.png"
+          alt="Catalyst Labs Laboratory"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-blue-900/40 flex flex-col items-center justify-center text-center px-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-lg mb-4">
+            Catalyst Laboratories Pvt. Ltd.
+          </h1>
+          <p className="text-lg md:text-xl text-blue-100 max-w-2xl leading-relaxed">
+            Innovation • Quality • Trust — Advancing Healthcare for a Healthier
+            Tomorrow
+          </p>
+        </div>
+      </section>
+
+      {/* 🔹 About Section */}
+      <section className="w-full max-w-6xl mx-auto py-16 px-6 text-center bg-white">
+        <h2 className="text-3xl font-bold text-blue-800 mb-4">
+          Welcome to Catalyst Laboratories
+        </h2>
+        <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10">
+          Catalyst Laboratories Pvt. Ltd. is dedicated to delivering superior
+          pharmaceutical formulations and healthcare innovations. We believe in
+          ethical research, precision, and consistent quality that truly makes a
+          difference in people’s lives.
         </p>
-        <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition text-sm sm:text-base">
+
+        {/* 🔹 CTA Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mb-14">
+          <a
+            href="/products"
+            className="px-6 py-3 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition"
+          >
             Explore Products
-          </button>
-          <button className="border border-green-600 text-green-700 px-6 py-3 rounded-lg hover:bg-green-50 transition text-sm sm:text-base">
+          </a>
+          <a
+            href="/research"
+            className="px-6 py-3 border border-blue-700 text-blue-700 rounded-md hover:bg-blue-50 transition"
+          >
             Our Research
-          </button>
+          </a>
+        </div>
+
+        {/* 🔹 Highlight Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
+          <div className="p-6 bg-blue-50 rounded-lg shadow hover:shadow-md border border-blue-100 transition">
+            <h3 className="text-xl font-semibold text-blue-800 mb-3">
+              Quality & Compliance
+            </h3>
+            <p className="text-gray-700 text-sm md:text-base">
+              We adhere to WHO-GMP standards, ensuring every formulation meets
+              the highest benchmarks of safety and efficacy.
+            </p>
+          </div>
+
+          <div className="p-6 bg-blue-50 rounded-lg shadow hover:shadow-md border border-blue-100 transition">
+            <h3 className="text-xl font-semibold text-blue-800 mb-3">
+              Research Focus
+            </h3>
+            <p className="text-gray-700 text-sm md:text-base">
+              Our R&D team develops innovative drug delivery systems and
+              therapeutic solutions for emerging healthcare needs.
+            </p>
+          </div>
+
+          <div className="p-6 bg-blue-50 rounded-lg shadow hover:shadow-md border border-blue-100 transition">
+            <h3 className="text-xl font-semibold text-blue-800 mb-3">
+              Global Vision
+            </h3>
+            <p className="text-gray-700 text-sm md:text-base">
+              We aspire to expand our global footprint through partnerships and
+              accessible, affordable healthcare worldwide.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Highlights Section */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-12 w-full max-w-6xl px-2">
-        <div className="bg-white rounded-xl shadow p-5 hover:shadow-lg transition">
-          <h3 className="text-green-700 font-semibold text-lg mb-2">
-            Quality First
-          </h3>
-          <p className="text-gray-700 text-sm sm:text-base">
-            Committed to rigorous quality protocols and regulatory compliance.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-xl shadow p-5 hover:shadow-lg transition">
-          <h3 className="text-green-700 font-semibold text-lg mb-2">
-            Affordable Care
-          </h3>
-          <p className="text-gray-700 text-sm sm:text-base">
-            Delivering cost-effective pharmaceutical formulations without
-            compromising safety.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-xl shadow p-5 hover:shadow-lg transition">
-          <h3 className="text-green-700 font-semibold text-lg mb-2">
-            Wide Portfolio
-          </h3>
-          <p className="text-gray-700 text-sm sm:text-base">
-            Tablets, capsules, and specialized formulations across several
-            therapeutic areas.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="bg-yellow-100 text-center p-6 sm:p-10 rounded-2xl shadow max-w-5xl w-full mb-10">
-        <h3 className="text-green-800 font-semibold text-lg sm:text-xl mb-2">
-          Have an enquiry?
-        </h3>
-        <p className="text-gray-800 text-sm sm:text-base mb-4">
-          Email us at{" "}
+      {/* 🔹 Contact Section */}
+      <section className="w-full bg-blue-50 py-12 px-6 text-center border-t border-blue-100">
+        <h2 className="text-2xl font-semibold text-blue-800 mb-4">
+          Have an Enquiry?
+        </h2>
+        <p className="text-gray-700 mb-4">
+          Reach out to us at{" "}
           <a
             href="mailto:catalystlaboratoriespvtltd@gmail.com"
-            className="text-green-700 font-medium underline hover:text-green-800"
+            className="text-blue-700 font-medium hover:underline"
           >
             catalystlaboratoriespvtltd@gmail.com
           </a>{" "}
-          or visit the Contacts page.
+          or visit our Contacts page.
         </p>
-        <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition text-sm sm:text-base">
+        <a
+          href="/contacts"
+          className="inline-block px-6 py-3 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition"
+        >
           Contact Us
-        </button>
+        </a>
       </section>
     </main>
   );
