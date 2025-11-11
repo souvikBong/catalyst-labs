@@ -38,12 +38,7 @@ export default function Home() {
           >
             Explore Products
           </a>
-          <a
-            href="/research"
-            className="px-6 py-3 border border-blue-700 text-blue-700 rounded-md hover:bg-blue-50 transition"
-          >
-            Our Research
-          </a>
+          
         </div>
 
         {/* 🔹 Highlight Cards */}
