@@ -6,20 +6,15 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-blue-600 shadow-md text-white sticky top-0 z-50">
+    <header className="bg-blue-700 shadow-md text-white sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center p-4">
-        {/* Logo and Title */}
-        <div className="flex items-center space-x-3">
+        {/* Logo Only */}
+        <div>
           <img
             src="/logo.jpg"
             alt="Catalyst Labs Logo"
-            width={70}
-            height={70}
-            className="rounded-full md:w-20 md:h-20 w-14 h-14"
+            className="rounded-md w-40 h-16 object-cover md:w-48 md:h-20"
           />
-          <h1 className="text-2xl md:text-3xl font-semibold tracking-wide font-[Bahnschrift]">
-            Catalyst Labs
-          </h1>
         </div>
 
         {/* Hamburger Icon (visible on mobile) */}
@@ -56,13 +51,13 @@ export default function Header() {
         <nav
           className={`${
             menuOpen ? "block" : "hidden"
-          } absolute md:static top-16 left-0 w-full md:w-auto bg-blue-700 md:bg-transparent md:flex md:space-x-8 text-lg font-medium transition-all duration-300`}
+          } absolute md:static top-16 left-0 w-full md:w-auto bg-blue-800 md:bg-transparent md:flex md:space-x-8 text-lg font-medium transition-all duration-300`}
         >
-          {["Home", "About", "Research", "Products", "Contacts"].map((item) => (
+          {["Home", "About", "Products", "Contacts"].map((item) => (
             <Link
               key={item}
               href={`/${item === "Home" ? "" : item.toLowerCase()}`}
-              className="block px-6 py-3 md:px-0 md:py-0 hover:text-gray-200 text-center md:text-left"
+              className="block px-6 py-3 md:px-0 md:py-0 hover:text-gray-300 text-center md:text-left"
               onClick={() => setMenuOpen(false)}
             >
               {item}

@@ -5,15 +5,6 @@ export const metadata = {
   title: "Catalyst Laboratories Pvt. Ltd.",
   description:
     "Official website of Catalyst Laboratories Pvt. Ltd. – delivering quality pharmaceuticals, diagnostics, and healthcare innovation.",
-  keywords: [
-    "Catalyst Labs",
-    "pharmaceuticals",
-    "diagnostics",
-    "research",
-    "healthcare",
-    "medical",
-    "biotech",
-  ],
 };
 
 export default function RootLayout({ children }) {

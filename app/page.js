@@ -4,7 +4,7 @@ export default function Home() {
       {/* 🔹 Fullscreen Hero Section */}
       <section className="relative w-full h-screen">
         <img
-          src="/bg.png"
+          src="/bg.jpg"
           alt="Catalyst Labs Laboratory"
           className="w-full h-full object-cover"
         />
@@ -13,8 +13,7 @@ export default function Home() {
             Catalyst Laboratories Pvt. Ltd.
           </h1>
           <p className="text-lg md:text-xl text-blue-100 max-w-2xl leading-relaxed">
-            Innovation • Quality • Trust — Advancing Healthcare for a Healthier
-            Tomorrow
+            Precision • Quality • Affordable - Accelerating lives for a better tomorrow
           </p>
         </div>
       </section>

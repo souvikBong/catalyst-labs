@@ -1,25 +1,10 @@
-export const metadata = {
-  title: "About | Catalyst Laboratories Pvt. Ltd.",
-  description:
-    "Learn about Catalyst Laboratories Pvt. Ltd. — our mission, vision, and commitment to quality healthcare.",
-};
-
-export default function AboutPage() {
+export default function About() {
   return (
-    <section className="bg-gray-50 text-gray-900 min-h-screen py-12 px-6">
-      <div className="max-w-5xl mx-auto text-center">
-        <h1 className="text-4xl font-bold text-blue-700 mb-6">
-          About Catalyst Laboratories
-        </h1>
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          Catalyst Laboratories Pvt. Ltd. is committed to advancing healthcare
-          through precision, innovation, and trust. Our mission is to develop
-          high-quality pharmaceutical formulations and provide reliable
-          healthcare solutions that improve lives.
-        </p>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          Founded by a team of experienced professionals, Catalyst Labs blends
-          research expertise with global quality standards to ensure
+    <section className="bg-gray-50 text-gray-800 py-20">
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="text-4xl font-bold text-blue-700 mb-6">About Us</h2>
+        <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Catalyst Laboratories delivers global quality standards to ensure
           cost-effective and safe formulations for every need.
         </p>
       </div>
