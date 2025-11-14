@@ -22,7 +22,7 @@ export default function Contacts() {
           </p>
 
           <p className="text-gray-700 mb-6">
-            <strong>Corporate Office:</strong><br />
+            <strong>C.O.:</strong><br />
             A321, Royal Palms, Goregaon (East),<br />
             Mumbai - 400065
           </p>

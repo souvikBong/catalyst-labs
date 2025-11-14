@@ -19,7 +19,7 @@ export default function Products() {
         "Calcium and Vitamin D3 supplement for stronger bones and improved bone density.",
     },
     {
-      name: "AMXGRD CV 625",
+      name: "AMOXIGUARD",
       category: "Antibiotic",
       description:
         "Amoxicillin with Clavulanic acid formulation for broad-spectrum bacterial infections.",
