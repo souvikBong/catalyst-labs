@@ -20,8 +20,8 @@ export default function RootLayout({ children }) {
               rights reserved.
             </p>
             <p className="mt-2">
-              Flat No-GB, Triparno BC-28, Deshbandhu Nagar, North 24 Parganas, West
-              Bengal, India – 700059
+              A321, Royal Palms, Goregaon (East),<br />
+            Mumbai - 400065
             </p>
             <p className="mt-1">
               Email: catalystlaboratoriespvtltd@gmail.com
