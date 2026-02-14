@@ -1,7 +1,12 @@
 @import "tailwindcss";
 
+/* FORCE LIGHT THEME → Prevent hydration mismatch */
+html {
+  color-scheme: light !important;
+}
+
 :root {
-  --background: #ffffff;
+  --background: #ffffff; /* Always light */
   --foreground: #171717;
 }
 
@@ -12,13 +17,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* REMOVE dark-mode media query completely */
 
+/* Default body styling */
 body {
   background: var(--background);
   color: var(--foreground);

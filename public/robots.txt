@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://catalyst-labs-jqdq.vercel.app/sitemap.xml
